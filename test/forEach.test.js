@@ -87,3 +87,4 @@ describe('forEach.test.js', function() {
         done()
     })
 })
+console.log('TODO: test judgeChild this.$parent')
