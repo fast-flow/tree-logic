@@ -1,13 +1,13 @@
 var TreeLogic = require('../index')
 var data = require('./data')
-var nameArray = []
+var itemArray = []
 var parentMap = {}
 
 console.log('Tips: forEach(data, childKey, handler(item, index, array)), item and this.$parent not deep copy!')
 
 TreeLogic.forEach(data, 'child', function (item, index, array) {
 
-    nameArray.push(item)
+    itemArray.push(item)
     parentMap[item.name] = {
         index: this.$parent.index,
         data: this.$parent.data,
@@ -15,7 +15,7 @@ TreeLogic.forEach(data, 'child', function (item, index, array) {
         name: this.$parent.data.map(function(item){ return item.name })
     }
 })
-console.log(nameArray)
+console.log(itemArray)
 /*
 [
   { name: 'nimo', child: [ [Object], [Object] ] },
