@@ -40,4 +40,20 @@ describe('forEach.test.js', function() {
         expect(require('fs').readFileSync(__dirname + '/forEach-parent.json').toString()).to.eql(jsonText)
         done()
     })
+    it('not deep copy', function (done) {
+        Tree.forEach(data, 'child', function (item, index, array) {
+            if (item.name === 'nimo') {
+                item.age = 24
+            }
+            if (item.name === 'nico') {
+                // this.$parent is "tim"
+                var lastParent = this.$parent.data[this.$parent.data.length-1]
+                lastParent.age = 10
+
+            }
+        })
+        expect(data[0].age).to.eql(24)
+        expect(data[0].child[0].age).to.eql(10)
+        done()
+    })
 })
