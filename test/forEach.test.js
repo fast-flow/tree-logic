@@ -1,5 +1,6 @@
 var expect = require("expect.js")
 var data = require('../example/data')
+var badData = require('../example/badData')
 var Tree = require('../index')
 var jsonFormat = require('json-format')
 describe('forEach.test.js', function() {
@@ -54,6 +55,35 @@ describe('forEach.test.js', function() {
         })
         expect(data[0].age).to.eql(24)
         expect(data[0].child[0].age).to.eql(10)
+        done()
+    })
+    it('judgeChild', function (done) {
+        var nameArray = []
+        Tree.forEach(
+            badData,
+            function judgeChild (item, index, array) {
+                // this.$parent
+                return item[1]
+            },
+            function handler (item, index, array) {
+                // this.$parent
+                nameArray.push(
+                    item[0].name + '|' + index
+                )
+            }
+        )
+        expect(nameArray).to.eql(
+            [ 'some|0',
+              'time|0',
+              'nico|0',
+              'Jack|1',
+              'Jen|0',
+              'Naer|1',
+              'Que|0',
+              'Beer|1',
+              'noname|0',
+              'yumi|1' ]
+        )
         done()
     })
 })
