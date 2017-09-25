@@ -59,6 +59,7 @@ describe('forEach.test.js', function() {
     })
     it('judgeChild', function (done) {
         var nameArray = []
+        var parentArray = []
         Tree.forEach(
             badData,
             function judgeChild (item, index, array) {
@@ -70,6 +71,7 @@ describe('forEach.test.js', function() {
                 nameArray.push(
                     item[0].name + '|' + index
                 )
+                parentArray.push(this.$parent)
             }
         )
         expect(nameArray).to.eql(
@@ -84,7 +86,7 @@ describe('forEach.test.js', function() {
               'noname|0',
               'yumi|1' ]
         )
+        expect(JSON.stringify(parentArray)).to.eql('[{"index":[],"data":[]},{"index":[0],"data":[[{"name":"some"},[[{"name":"time"},[[{"name":"nico"}],[{"name":"Jack"},[[{"name":"Jen"}]]]]]]]]},{"index":[0,0],"data":[[{"name":"some"},[[{"name":"time"},[[{"name":"nico"}],[{"name":"Jack"},[[{"name":"Jen"}]]]]]]],[{"name":"time"},[[{"name":"nico"}],[{"name":"Jack"},[[{"name":"Jen"}]]]]]]},{"index":[0,0],"data":[[{"name":"some"},[[{"name":"time"},[[{"name":"nico"}],[{"name":"Jack"},[[{"name":"Jen"}]]]]]]],[{"name":"time"},[[{"name":"nico"}],[{"name":"Jack"},[[{"name":"Jen"}]]]]]]},{"index":[0,0,1],"data":[[{"name":"some"},[[{"name":"time"},[[{"name":"nico"}],[{"name":"Jack"},[[{"name":"Jen"}]]]]]]],[{"name":"time"},[[{"name":"nico"}],[{"name":"Jack"},[[{"name":"Jen"}]]]]],[{"name":"Jack"},[[{"name":"Jen"}]]]]},{"index":[],"data":[]},{"index":[1],"data":[[{"name":"Naer"},[[{"name":"Que"}],[{"name":"Beer"},[[{"name":"noname"}],[{"name":"yumi"}]]]]]]},{"index":[1],"data":[[{"name":"Naer"},[[{"name":"Que"}],[{"name":"Beer"},[[{"name":"noname"}],[{"name":"yumi"}]]]]]]},{"index":[1,1],"data":[[{"name":"Naer"},[[{"name":"Que"}],[{"name":"Beer"},[[{"name":"noname"}],[{"name":"yumi"}]]]]],[{"name":"Beer"},[[{"name":"noname"}],[{"name":"yumi"}]]]]},{"index":[1,1],"data":[[{"name":"Naer"},[[{"name":"Que"}],[{"name":"Beer"},[[{"name":"noname"}],[{"name":"yumi"}]]]]],[{"name":"Beer"},[[{"name":"noname"}],[{"name":"yumi"}]]]]}]')
         done()
     })
 })
-console.log('TODO: test judgeChild this.$parent')
