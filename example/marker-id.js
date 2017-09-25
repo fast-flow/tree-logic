@@ -97,3 +97,44 @@ var result = [
     }
 ]
 expect(numberData).to.eql(result)
+expect(
+    TreeLogic.find(numberData, 'child', function (item) {
+        return item.$id == '2-2'
+    })
+).to.eql(
+    {
+        "target": {
+            "name": "oil",
+            "id": "2",
+            "$indexID": "1-1",
+            "$id": "2-2"
+        },
+        "parent": {
+            "index": [
+                1
+            ],
+            "data": [
+                {
+                    "name": "jen",
+                    "id": "2",
+                    "child": [
+                        {
+                            "name": "tom",
+                            "id": "1",
+                            "$indexID": "1-0",
+                            "$id": "2-1"
+                        },
+                        {
+                            "name": "oil",
+                            "id": "2",
+                            "$indexID": "1-1",
+                            "$id": "2-2"
+                        }
+                    ],
+                    "$indexID": "1",
+                    "$id": "2"
+                }
+            ]
+        }
+    }
+)
