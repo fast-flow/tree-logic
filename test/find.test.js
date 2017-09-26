@@ -3,7 +3,7 @@ var numberData = require('../example/numberData')
 var Tree = require('../index')
 describe('find.test.js', function() {
     it('basic', function(done) {
-        Tree.map(numberData, 'child', function (item, index) {
+        var resultData = Tree.map(numberData, 'child', function (item, index) {
             item.$indexID = this.$parent.index.concat([index]).join('-')
             item.$id = this.$parent.data.concat(item).map(function (parentItem) {
                 return parentItem.id
@@ -11,7 +11,7 @@ describe('find.test.js', function() {
             return item
         })
         expect(
-            Tree.find(numberData, 'child', function (item) {
+            Tree.find(resultData, 'child', function (item) {
                 return item.$id == '2-2'
             })
         ).to.eql(

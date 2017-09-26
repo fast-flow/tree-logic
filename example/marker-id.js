@@ -2,7 +2,7 @@ var TreeLogic = require('../index')
 var data = require('./numberData')
 var expect = require("expect.js")
 var numberData = require('../example/numberData')
-TreeLogic.map(numberData, 'child', function (item, index) {
+var resultData = TreeLogic.map(numberData, 'child', function (item, index) {
     item.$indexID = this.$parent.index.concat([index]).join('-')
     item.$id = this.$parent.data.concat(item).map(function (parentItem) {
         return parentItem.id
@@ -96,9 +96,9 @@ var result = [
         "$id": "2"
     }
 ]
-expect(numberData).to.eql(result)
+expect(resultData).to.eql(result)
 expect(
-    TreeLogic.find(numberData, 'child', function (item) {
+    TreeLogic.find(resultData, 'child', function (item) {
         return item.$id == '2-2'
     })
 ).to.eql(

@@ -3,14 +3,15 @@ var numberData = require('../example/numberData')
 var Tree = require('../index')
 describe('map.test.js', function() {
     it('basic', function(done) {
-        Tree.map(numberData, 'child', function (item, index) {
+        var result = Tree.map(numberData, 'child', function (item, index) {
             item.$indexID = this.$parent.index.concat([index]).join('-')
             item.$id = this.$parent.data.concat(item).map(function (parentItem) {
                 return parentItem.id
             }).join('-')
             return item
         })
-        expect(numberData).to.eql(
+        expect(numberData[0].$id).to.eql(undefined)
+        expect(result).to.eql(
             [
                 {
                     "name": "nimo",
