@@ -1,39 +1,56 @@
-var TreeLogic = require('../index')
-var data = require('./data')
-var itemArray = []
-var parentMap = {}
+# 示例
 
-console.log('Tips: forEach(data, judgeChild, handler(item, index, array)), item and this.$parent not deep copy!')
+## data
 
-TreeLogic.forEach(data, 'child', function (item, index, array) {
-    itemArray.push(item)
-    parentMap[item.name] = {
-        index: this.$parent.index,
-        data: this.$parent.data,
-        // filter name
-        name: this.$parent.data.map(function(item){ return item.name })
-    }
-})
-console.log(itemArray)
-/*
+````code
+{
+    title: '示例数据源',
+    desc: '`基础数据` `树形结构数据` `无id重复`',
+    js: './data.demo.js',
+    source: './data.demo.js',
+    open: false
+}
+````
+
+
+## forEach
+递归遍历, 从浅至深 , 从上至下
+> Tips: forEach(data, judgeChild, handler(item, index, array)), item and this.$parent not deep copy!
+
+````code
+{
+    title: '基础使用',
+    desc: '`desc`',
+    html: '<div id="forEach-demo" ></div>',
+    js: './forEach.demo.js',
+    source: './forEach.demo.js',
+    open: false
+}
+````
+> 打印数据可以控制台查看,也可以展开查看下列简列
+
+- itemArray
+
+````json
 [
-  { name: 'nimo', child: [ [Object], [Object] ] },
-  { name: 'tim', child: [ [Object], [Object] ] },
-  { name: 'nico' },
-  { name: 'Jack', child: [ [Object] ] },
-  { name: 'Jen' },
-  { name: 'sam', child: [ [Object], [Object] ] },
-  { name: 'oil' },
-  { name: 'poli' },
-  { name: 'Naer', child: [ [Object], [Object] ] },
-  { name: 'Que' },
-  { name: 'Beer', child: [ [Object], [Object] ] },
-  { name: 'noname' },
-  { name: 'yumi' }
+  { name: nimo, id: 1, child: [ [Object], [Object] ] },
+  { name: tim, id: 11, child: [ [Object], [Object] ] },
+  { name: nico, id: 111 },
+  { name: Jack, id: 112, child: [ [Object] ] },
+  { name: Jen, id: 1121 },
+  { name: sam, id: 12, child: [ [Object], [Object] ] },
+  { name: oil, id: 121 },
+  { name: poli, id: 122 },
+  { name: Naer, id: 2, child: [ [Object], [Object] ] },
+  { name: Que, id: 21 },
+  { name: Beer, id: 22, child: [ [Object], [Object] ] },
+  { name: noname, id: 221 },
+  { name: yumi, id: 222 }
 ]
-*/
-console.log(parentMap)
-/*
+````
+- parentMap
+
+````json
 {
     nimo: {
         index: [],
@@ -101,4 +118,33 @@ console.log(parentMap)
         name: ['Naer', 'Beer']
     }
 }
-*/
+````
+
+## map
+
+`
+`
+
+## find
+
+`
+`
+
+## some
+
+`
+`
+
+## filter
+
+`
+`
+
+## toggleCheck
+
+`
+`
+
+
+
+

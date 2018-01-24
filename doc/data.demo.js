@@ -1,18 +1,23 @@
-module.exports = [
+var data = [
     {
         name: 'nimo',
+        id:'1',
         child: [
             {
                 name: 'tim',
+                id:'11',
                 child: [
                     {
-                        name: 'nico'
+                        name: 'nico',
+                        id:'111',
                     },
                     {
                         name: 'Jack',
+                        id:'112',
                         child: [
                             {
-                                name: 'Jen'
+                                name: 'Jen',
+                                id:'1121',
                             }
                         ]
                     }
@@ -20,12 +25,15 @@ module.exports = [
             },
             {
                 name: 'sam',
+                id:'12',
                 child: [
                     {
-                        name: 'oil'
+                        name: 'oil',
+                        id:'121',
                     },
                     {
-                        name: 'poli'
+                        name: 'poli',
+                        id:'122',
                     }
                 ]
             }
@@ -33,21 +41,28 @@ module.exports = [
     },
     {
         name: 'Naer',
+        id:'2',
         child: [
             {
-                name: 'Que'
+                name: 'Que',
+                id:'21',
             },
             {
                 name: 'Beer',
+                id:'22',
                 child: [
                     {
-                        name: 'noname'
+                        name: 'noname',
+                        id:'221',
                     },
                     {
-                        name: 'yumi'
+                        name: 'yumi',
+                        id:'222',
                     }
                 ]
             }
         ]
     }
 ]
+
+/*ONFACE-DEL*/module.exports = data
