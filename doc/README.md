@@ -8,7 +8,7 @@
     desc: '`基础数据` `树形结构数据` `无id重复`',
     js: './data.demo.js',
     source: './data.demo.js',
-    open: false
+    open: true
 }
 ````
 
@@ -26,7 +26,7 @@
     desc: '`desc`',
     js: './forEach.demo.js',
     source: './forEach.demo.js',
-    open: false
+    open: true
 }
 ````
 > 打印数据可以控制台查看,也可以展开`</>`查看下列简列
@@ -129,7 +129,7 @@ parentMap
     desc: '`desc`',
     js: './map.demo.js',
     source: './map.demo.js',
-    open: false
+    open: true
 }
 ````
 resultData
@@ -247,7 +247,7 @@ resultData
     desc: '`desc`',
     js: './find.demo.js',
     source: './find.demo.js',
-    open: false
+    open: true
 }
 ````
 result
@@ -309,7 +309,7 @@ result
     desc: '`desc`',
     js: './some.demo.js',
     source: './some.demo.js',
-    open: false
+    open: true
 }
 ````
 > 打印数据可以控制台查看,也可以展开`</>`查看下列简列
@@ -338,7 +338,7 @@ visitedItem
     desc: '`desc`',
     js: './filter.demo.js',
     source: './filter.demo.js',
-    open: false
+    open: true
 }
 ````
 result

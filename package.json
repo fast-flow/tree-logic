@@ -1,6 +1,6 @@
 {
     "name": "tree-logic",
-    "main": "lib/index.js",
+    "main": "index.js",
     "version": "0.1.0",
     "description": "Treelogic",
     "keywords": "",
