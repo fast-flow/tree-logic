@@ -1,4 +1,4 @@
-var TreeLogic = require('../lib/index');
+var TreeLogic = require('tree-logic');
 var data = require('./data.demo');
 
 var itemArray = []
@@ -16,4 +16,3 @@ TreeLogic.forEach(data, 'child', function (item, index, array) {
 })
 console.log('----- forEach itemArray -----\n',itemArray)
 console.log('----- forEach parentMap -----\n',parentMap)
-

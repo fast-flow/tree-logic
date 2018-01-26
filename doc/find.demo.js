@@ -1,4 +1,4 @@
-var TreeLogic = require('../lib/index');
+var TreeLogic = require('tree-logic');
 var data = require('./data.demo');
 
 var result = TreeLogic.find(data, 'child', function (item, index, array) {

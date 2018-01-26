@@ -1,16 +1,5 @@
-# 示例
-
-## data
-
-````code
-{
-    title: '示例数据源',
-    desc: '`基础数据` `树形结构数据` `无id重复`',
-    js: './data.demo.js',
-    source: './data.demo.js',
-    open: true
-}
-````
+# 工具类
+可以直接调用
 
 ## forEach
 递归遍历, 从浅至深 , 从上至下
@@ -362,6 +351,9 @@ result
   }
 ]
 ````
+
+## init
+
 
 ## toggleCheck
 
