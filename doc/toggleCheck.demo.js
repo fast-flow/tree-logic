@@ -1,5 +1,4 @@
 import { TreeLogic } from 'tree-logic';
-// var TreeLogic = require('tree-logic').TreeLogic;
 var data = require('./data.demo');
 
 
@@ -12,11 +11,8 @@ var tree = new TreeLogic({
         return checkedArray
     },
     judgeChild:'child',
-    // extendParent: false,
-    // extendChild: false,
-    multiple: false,
     onChange(checkeds) {
         checkedArray = extend(true,[],checkeds)
     }
 })
-tree.toggleCheck('2')
+tree.toggleCheck('11')

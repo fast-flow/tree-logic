@@ -1,4 +1,4 @@
-module.exports = [
+var repeatIdData = [
     {
         name: 'nimo',
         id: '1',
@@ -28,3 +28,5 @@ module.exports = [
         ]
     }
 ]
+
+/*ONFACE-DEL*/module.exports = repeatIdData

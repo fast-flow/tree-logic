@@ -1,5 +1,13 @@
 # 工具类
-可以直接调用
+
+## 加载调用
+```js
+import TreeLogic from 'tree-logic';
+```
+或
+```js
+var TreeLogic = require('tree-logic');
+```
 
 ## forEach
 递归遍历, 从浅至深 , 从上至下
@@ -245,17 +253,19 @@ result
   target: {
     name: Beer,
     id: 22,
-    child: [
-      {
-        name: noname,
-        id: 221
-      },
-      {
-        name: yumi,
-        id: 222
-      }
-    ]
+    child: [ [object] , [object] ]
   },
+  siblings:[
+    {
+        name: Que,
+        id: 21
+    },
+    {
+        name: Beer,
+        id: 22,
+        child: [ [object] , [object] ]
+    }
+  ],
   parent: {
     index: [
       1
@@ -351,11 +361,3 @@ result
   }
 ]
 ````
-
-## init
-
-
-## toggleCheck
-
-`
-`
