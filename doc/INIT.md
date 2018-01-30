@@ -64,3 +64,8 @@ var tree = new TreeLogic({
     open: true
 }
 ````
+
+checkeds
+```
+["1", "11", "111"]
+```
