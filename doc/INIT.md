@@ -36,7 +36,7 @@ var tree = new TreeLogic({
     - type : function
     - @return : [Array]
     - 作用 : 获取最新的数据源
-    - 例 : [示例data](/doc/data.html#data)
+    - 例 : [示例data](./data.html#data)
 - getChecked
     - type : function
     - @return : [Array]
@@ -45,7 +45,7 @@ var tree = new TreeLogic({
 - judgeChild
     - type : String
     - 作用 : 递归遍历所需子节点的 key
-    - 例 : [示例data](/doc/data.html#data) 中的子节点`key`为`'child'`
+    - 例 : [示例data](./data.html#data) 中的子节点`key`为`'child'`
 - onToggleCheck
     - type : function
     - @param : [Array] 选中状态变化后的被选中的id数组
@@ -67,4 +67,56 @@ var tree = new TreeLogic({
 checkeds
 ```
 ["1", "11", "111"]
+```
+
+## tool
+
+forEach
+> tree.forEach(handler)     
+> 回调函数使用方法 [参考](./README.md#forEach)
+
+```js
+tree.forEach(function(item, index, array){
+    // do something
+})
+```
+
+map
+> tree.map(handler)     
+> 回调函数使用方法 [参考](./README.md#map)
+
+```js
+tree.map(function(item, index, array){
+    return item
+})
+```
+
+find
+> tree.find(handler)     
+> 回调函数使用方法 [参考](./README.md#find)
+
+```js
+let result = tree.find(function(item, index, array){
+    return true
+})
+```
+
+some
+> tree.some(handler)     
+> 回调函数使用方法 [参考](./README.md#some)
+
+```js
+tree.some(function(item, index, array){
+    return true
+})
+```
+
+filter
+> tree.filter(handler)     
+> 回调函数使用方法 [参考](./README.md#filter)
+
+```js
+tree.filter(function(item, index, array){
+    return item
+})
 ```
