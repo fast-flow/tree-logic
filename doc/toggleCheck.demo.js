@@ -11,7 +11,7 @@ var tree = new TreeLogic({
         return checkedArray
     },
     judgeChild:'child',
-    onToggle(checkeds) {
+    onToggleCheck(checkeds) {
         console.log('----- toggleCheck checkeds -----\n',checkeds)
         // checkedArray = extend(true,[],checkeds)
     }

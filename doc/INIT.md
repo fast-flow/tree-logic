@@ -16,7 +16,6 @@ new TreeLogic(option)
 
 ```js
 import { TreeLogic } from 'tree-logic';
-// var TreeLogic = require('tree-logic').TreeLogic;
 
 var tree = new TreeLogic({
     getData() {
@@ -51,7 +50,7 @@ var tree = new TreeLogic({
     - type : function
     - @param : [Array] 选中状态变化后的被选中的id数组
     - 作用 : 将选中状态变化后的被选中的id数组回调给使用者
-    - 例 : [示例](#data)
+    - 例 : [示例](#toggleCheck)
 
 ## toggleCheck
 
