@@ -135,6 +135,7 @@ if (fis.project.currentMedia() !== 'npm') {
                                     <div class="face-one-code">
                                         <div class="face-one-code-example"></div>
                                         <div class="face-one-code-info">
+                                            <div class="face-one-code-info-desc">json</div>
                                             <span class="face-one-code-info-switchCode fi fi-code"></span>
                                         </div>
                                         <div class="face-one-code-source">

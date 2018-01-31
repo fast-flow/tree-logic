@@ -21,7 +21,7 @@
 如果需要直接使用`tree-logic`的逻辑接口，请了解以下几个基本注意点。        
 - id        
 虽然示例的[数据源](。/data)中都使用了`节点id`，但是对提供的工具类方法而言，它不是必要的`key`。      
-只有你实例对象后使用[toggleCheck](。/INIT。md#toggleCheck)方法时，`节点id`才是必要的`key`并且要求id是唯一不重复的，即便数据源中没有节点id，也可以使用[map](。/README。md#map)去生成节点id。       
+只有你实例对象后使用[toggleCheck](。/INIT。md#toggleCheck)方法时，`节点id`才是必要的`key`并且要求id是唯一不重复的，即便数据源中没有节点id，也可以使用[map](。/DEMO#notId)去生成节点id。       
 另外，`id`的类型分为`string`或`number`，尽可能在一系列操作中都保持一种类型，以免导致意外的问题。
 
 ## 研发中的设计接口
